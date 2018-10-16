@@ -61,12 +61,10 @@ def visualize():
     f, axarr = plt.subplots(2, 2)
     axarr[0, 0].plot(x, y)
     axarr[0, 0].set_title('Line Graph')
-    axarr[0, 1].scatter(x, y)
-    axarr[0, 1].set_title('Scatter')
-    axarr[1, 0].hist(x, bins=[0, 5, 10, 15, 20])
-    axarr[1, 0].set_title('x Histogram')
-    axarr[1, 1].hist(y, bins=[-30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20])
-    axarr[1, 1].set_title('y Histogram')
+    axarr[1, 1].scatter(x, y)
+    axarr[1, 1].set_title('Scatter')
+    axarr[1, 0].hist([x, y], bins=[-30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20])
+    axarr[1, 0].set_title('y Histogram')
     for ax in axarr.flat:
         ax.set(xlabel='x-label', ylabel='y-label')
     # Hide x labels and tick labels for top plots and y ticks for right plots.
